@@ -6,9 +6,17 @@
 
 // Add scrollDetect callback function on window.addEventlistener('scroll', callback) Listener
 
+
 function scrollDetect() {
-    
+    let header = document.getElementsByClassName("header");
+    let headerHeight = header.offsetHeight;
+    if(header.scrollTop > headerHeight){
+        header.classList.add("fixed-top")
+    } else {
+        header.classList.remove("fixed-top")
+    }
 }
+window.addEventListener('scroll', scrollDetect())
 
 // Define Play button variable
 
