@@ -4,9 +4,11 @@
 // e.target.scrollingElement.scrollTop use that method when track scrolling amount
 
 
-
 // Add scrollDetect callback function on window.addEventlistener('scroll', callback) Listener
 
+function scrollDetect() {
+    
+}
 
 // Define Play button variable
 

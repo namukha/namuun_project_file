@@ -19,18 +19,14 @@ h1 h2 h3{
     color: #0d1317;
 }
 
-.main-header{
+.main-navbar{
     background-color: white;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
 }
 
-.main-header a{
-    color: #0d1317;
+.main-navbar a{
+    color: #0d1317 !important;
     font-size: 15px;
-    padding: 5px;
+    padding: 15px 20px !important;
 }
 
 .header{
