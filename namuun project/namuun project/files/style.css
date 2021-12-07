@@ -100,7 +100,7 @@ h1 h2 h3{
 .section4::before{
     content: "";
     position: absolute;
-    background-image: url(/images/Ribbon.png);
+    background-image: url(../images/Ribbon.png);
     background-repeat: no-repeat;
     width: 200px;
     height: 200px;
@@ -141,7 +141,7 @@ h1 h2 h3{
 
 .section5-1{
     justify-self: start;
-    background-image: url(/images/experience-image.png);
+    background-image: url(../images/experience-image.png);
     background-repeat: no-repeat;
     width: 50%;
     z-index: 1;
@@ -166,18 +166,15 @@ h1 h2 h3{
     z-index: -1;
 }
 
-.section6-2::before{
-    content: "";
+.btn{
     position: absolute;
-    background-image: url(/images/play-icon.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-    border-radius: 50%;
+    background-color: white !important;
+    border-radius: 50% !important;
     width: 40px;
     height: 40px;
     left: 30px;
     bottom: 30px;
+    z-index: 1;
 }
 
 .section6-2::after{

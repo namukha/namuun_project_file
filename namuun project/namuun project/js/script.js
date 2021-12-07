@@ -7,10 +7,11 @@
 // Add scrollDetect callback function on window.addEventlistener('scroll', callback) Listener
 
 
-function scrollDetect() {
+function scrollDetect(e) {
     let header = document.getElementsByClassName("header");
     let headerHeight = header.offsetHeight;
-    if(header.scrollTop > headerHeight){
+    let scrollPx = e.target.header.scrollTop;
+    if(scrollPx > headerHeight){
         header.classList.add("fixed-top")
     } else {
         header.classList.remove("fixed-top")
@@ -20,16 +21,23 @@ window.addEventListener('scroll', scrollDetect())
 
 // Define Play button variable
 
-
+var button = document.getElementById("btn")
+var url = document.getElementById("#youtubeVideo").attr('src')
+var videoURL = document.getElementById("#youtubeVideo")
 
 // Create a modal with a single line of JavaScript: https://getbootstrap.com/docs/5.1/components/modal/#via-javascript
 // Define finsetModal then use Bootstrap modal Object request
+
+var finsetModal = new bootstrap.Modal(document.getElementById("myModal"), {
+    keyboard: true
+})
 
 
 // Create Click Event Listener on Play button variable (you already created above)
 // add finsetModal.show() on callback function
 // Select '.modal-body' class from finsetModal variable then use innerHTML method and add Youtube embed code
 
+button.addEventListener('click', finsetModal.show())
 
 
 // Create an XMLHttpRequest object
