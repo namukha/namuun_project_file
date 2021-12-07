@@ -8,36 +8,36 @@
 
 
 function scrollDetect(e) {
-    let header = document.getElementsByClassName("header");
+    let header = document.getElementById("header");
+    let nav = document.querySelector("nav")
     let headerHeight = header.offsetHeight;
-    let scrollPx = e.target.header.scrollTop;
+    let scrollPx = e.target.scrollingElement.scrollTop;
+    
     if(scrollPx > headerHeight){
-        header.classList.add("fixed-top")
+        nav.classList.add("fixed-top")
     } else {
-        header.classList.remove("fixed-top")
+        nav.classList.remove("fixed-top")
     }
 }
-window.addEventListener('scroll', scrollDetect())
+window.addEventListener('scroll', scrollDetect)
 
 // Define Play button variable
-
-var button = document.getElementById("btn")
-var url = document.getElementById("#youtubeVideo").attr('src')
-var videoURL = document.getElementById("#youtubeVideo")
-
 // Create a modal with a single line of JavaScript: https://getbootstrap.com/docs/5.1/components/modal/#via-javascript
 // Define finsetModal then use Bootstrap modal Object request
-
-var finsetModal = new bootstrap.Modal(document.getElementById("myModal"), {
-    keyboard: true
-})
-
-
 // Create Click Event Listener on Play button variable (you already created above)
 // add finsetModal.show() on callback function
 // Select '.modal-body' class from finsetModal variable then use innerHTML method and add Youtube embed code
 
-button.addEventListener('click', finsetModal.show())
+
+// var button = document.getElementById("btn")
+// var url = document.getElementById("#youtubeVideo").attr('src')
+// var videoURL = document.getElementById("#youtubeVideo")
+
+// var finsetModal = new bootstrap.Modal(document.getElementById("myModal"), {
+//     keyboard: true
+// })
+
+// button.addEventListener('click', finsetModal.show())
 
 
 // Create an XMLHttpRequest object
@@ -45,7 +45,16 @@ button.addEventListener('click', finsetModal.show())
 // Open a GET request and use data from ../data/company_intro.json
 // Send the request
 
+var xhr = new XMLHttpRequest();
 
+xhr.onload = function() {
+    console.log(xhr.responseText)
+    document.getElementById("section1-1").innerHTML = this.responseText
+    
+}
+
+xhr.open('GET', '../data/company_intro.json');
+xhr.send();
 
 /*  Add subscription email action. When subscription POST request is successful, 
     change the email element and subscribe button into "Your subscription is successful" Text. 

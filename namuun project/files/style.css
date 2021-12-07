@@ -29,6 +29,11 @@ h1 h2 h3{
     padding: 15px 20px !important;
 }
 
+.main-navbar{
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
 .header{
     background-color: #edf7ff;
 }
