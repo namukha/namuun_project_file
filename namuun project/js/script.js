@@ -45,16 +45,33 @@ window.addEventListener('scroll', scrollDetect)
 // Open a GET request and use data from ../data/company_intro.json
 // Send the request
 
-var xhr = new XMLHttpRequest();
+const promise = new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            console.log(this.responseText)
+            return resolve(xhr.responseText)
+        } else {
+            console.log("Failed")
+        }
+    }
+    xhr.open('GET', '../data/company_intro.json');
+    xhr.send()
+})
 
-xhr.onload = function() {
-    console.log(xhr.responseText)
-    document.getElementById("section1-1").innerHTML = this.responseText
-    
-}
-
-xhr.open('GET', '../data/company_intro.json');
-xhr.send();
+promise.then((data) => {
+    var data = JSON.parse(data);
+    const company_intro = data.data;
+    company_intro.map((i) => {
+        document.getElementById("section1-1").innerHTML += 
+        `<div class="col-12 col-md-4">
+        <img style="border-radius: 15px;" src="${i.thumbnail}" alt="post1">
+        <h3>${i.title}</h3>
+        <p>${i.content}</p>
+        <a style="color: #f58a07;" href="#">Learn More→</a>
+        </div>`
+    })
+})
 
 /*  Add subscription email action. When subscription POST request is successful, 
     change the email element and subscribe button into "Your subscription is successful" Text. 

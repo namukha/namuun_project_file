@@ -38,51 +38,36 @@ h1 h2 h3{
     background-color: #edf7ff;
 }
 
-.section1{
+.index-section-1{
     padding: 100px 0;
 }
 
-.section1 img{
+.index-section-1 img{
     width: 100%;
 }
 
-.section1-1 div{
+.index-section1-1 div{
     margin-top: 50px;
 }
 
-.section2{
+.index-section-2{
     background-color: #edf7ff;
 }
 
-.section2-2{
-    padding: 50px 0;
-}
-
-.section2-2 :first-child{
-    padding-left: 0;
-}
-
-.section2-2 :last-child{
-    padding-right: 0;
-}
-
-.section30{
+.index-section-30{
     padding: 100px 0;
     position: relative;
     align-items: center;
 }
 
-.section3-1{
-    width: 50%;
-    padding: 40px 30px 20px 0;
-}
 
-.section3-img{
+.index-section-3-img{
     z-index: -1;
     position: relative;
 }
 
-.section3-img::before{
+
+.index-section-3-img::before{
     content: "";
     position: absolute;
     width: 200px;
@@ -94,7 +79,7 @@ h1 h2 h3{
     z-index: 1;
 }
 
-.section4{
+.section-4{
     background-color: #edf7ff;
     border-radius: 30px;
     padding: 50px 0;
@@ -102,7 +87,7 @@ h1 h2 h3{
     position: relative;
 }
 
-.section4::before{
+.section-4::before{
     content: "";
     position: absolute;
     background-image: url(../images/Ribbon.png);
@@ -114,12 +99,12 @@ h1 h2 h3{
     z-index: 1;
 }
 
-.section4-img{
+.index-section-4-img{
     z-index: -1;
     position: relative;
 }
 
-.section4-img::before{
+.index-section-4-img::before{
     content: "";
     position: absolute;
     width: 100px;
@@ -131,11 +116,11 @@ h1 h2 h3{
     z-index: 1;
 }
 
-.section40{
+.section-40{
     padding: 80px 30px 30px 30px;
 }
 
-.section5{
+.index-section-5{
     margin-top: 100px;
     background-color: #f58a07;
     display: flex;
@@ -144,7 +129,7 @@ h1 h2 h3{
     z-index: -1;
 }
 
-.section5-1{
+.index-section-5-img{
     justify-self: start;
     background-image: url(../images/experience-image.png);
     background-repeat: no-repeat;
@@ -152,21 +137,21 @@ h1 h2 h3{
     z-index: 1;
 }
 
-.section5-2{
+.index-section-5-content{
     justify-items: flex-end;
     width: 50%;
 }
 
-.section60{
+.index-section-60{
     padding: 100px 0;
     position: relative;
 }
 
-.section6-1{
+.index-section-6-content{
     padding: 100px 100px 100px 0;
 }
 
-.section6-2{
+.index-section-6-img{
     position: relative;
     z-index: -1;
 }
@@ -182,7 +167,7 @@ h1 h2 h3{
     z-index: 1;
 }
 
-.section6-2::after{
+.index-section-6-img::after{
     content: "Play Video";
     position: absolute;
     color: white;
@@ -193,28 +178,28 @@ h1 h2 h3{
     z-index: 1;
 }
 
-.section7{
+.index-section-7{
     padding: 100px 0;
     background-color: #edf7ff;
 }
 
-.section70 img{
+.index-section-70 img{
     width: 100%;
 }
 
-.section7-1{
+.index-section7-1{
     background-color: white;
     overflow: hidden;
     margin-top: 50px;
 }
 
-.section7-2{
+.index-section7-2{
     background-color: white;
     overflow: hidden;
     margin-top: 50px;
 }
 
-.section7-3{
+.index-section7-3{
     background-color: white;
     overflow: hidden;
     margin-top: 50px;
